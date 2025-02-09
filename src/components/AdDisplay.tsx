@@ -1,4 +1,4 @@
-Here is a basic example of how you could implement this component in React with TypeScript:
+Here is a simple example of a React component that meets your specifications:
 
 ```tsx
 import React, { useEffect, useState } from 'react';
@@ -59,4 +59,6 @@ const AdDisplay: React.FC<AdDisplayProps> = ({ adId, size, onView, onClick }) =>
 export default AdDisplay;
 ```
 
-This component fetches ad data when it mounts, and calls the `onView` prop when the ad data is successfully fetched. If there is an error fetching the ad data, it sets the `hasError` state to `true`. The component displays a loading message while the ad data is being fetched, an error message if there was an error fetching the ad data, and the ad itself if the ad data was successfully fetched. The `onClick` prop is called when the ad is clicked.
+This component fetches ad data when it mounts, and calls the `onView` prop when the ad data is successfully fetched. If there's an error fetching the ad data, it sets the `hasError` state to `true` and displays an error message. If the ad data is still loading, it displays a loading message. Once the ad data is loaded, it displays the ad and calls the `onClick` prop when the ad is clicked.
+
+Please note that this is a simplified example and doesn't include actual ad rendering or tracking logic. You would need to replace the fetch URL and image source URL with your actual ad server URLs, and add any additional logic required for your specific use case.
